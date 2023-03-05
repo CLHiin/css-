@@ -1,0 +1,91 @@
+/* {*是套用整個網頁 } */
+*{background-color: pink  ;}
+
+/*  名稱:標籤 */
+k{background-color: yellow;color:green;}
+
+/* .名稱:class類別 */
+.food  {color: blue;}
+.person{color: red ;}
+.background-color{background-color: grey;} 
+
+/* #名稱:id類別 */
+#css-1{color: purple;}
+#aa{background-color: green;}
+
+/* ----------------------------------------------------- */
+/* 標籤會被覆蓋 */
+/* id效力 > class效力 > 標籤(不論先後) */
+#id,aa,.class{background-color: grey      ;}
+#id          {background-color: lightgreen;}
+aa           {background-color: skyblue   ;}
+.class       {background-color: red       ;}
+
+/* xx yy 用在有分類的物品上(只要找的到就有效,不管中間有啥東西) */
+ul li{background-color: lightsalmon;}
+ul  a{background-color: brown  ;}
+div c{background-color: skyblue;}
+
+/* [指定的標籤] 讓所有有這標籤的都套用效果 */
+[type]{background-color: yellow;}
+
+/* {標籤(任意種類):hover}滑鼠移上去時,套用效果 */
+button:hover{background-color: red;}
+
+/* flex默認排列為左到右的橫排*/
+.container{
+    height : 100px;
+    display: flex ;
+    border : 5px dashed red;
+    flex-wrap: wrap;                /* flex-wrap:wrap會自動換行 */
+    /* column讓變成上到下,row是由左到右,reverse則使其相反 */
+    flex-direction: row-reverse;    /* 寫2次的話,後面會覆蓋掉前面的 */
+    justify-content:center;         /* justify-content(把內容放到主軸的...) */
+    align-content: flex-end;        /* align-content(把內容放到次軸的...) */
+    /*items讓物品分開,content讓物品緊貼(我不太懂原理是啥,無法詳細說明)
+    ,flex-end&start-置首或尾& space- around(將空間平均分給物品的2側)
+    & between(2側先排再平均分布空間)& evenly(將空間平均分給物品)*/}
+.container div{
+    border : 1px solid grey;
+    padding: 10px ;
+    width  : 100px;}
+
+/* flex:?代表佔的份量比,order會由小到大來排序(可以有負數) */
+.box1{flex:3;order:1;}.box1:hover{background-color: red;}
+.box2{flex:3;order:1;}.box2:hover{background-color: green;}
+.box3{flex:1;order:3;}.box3:hover{background-color: blue;}
+
+/* @keyframes 動畫 */
+@keyframes change-color-R-B{
+    from {background-color: red ;}
+    to   {background-color: blue;}
+}
+@keyframes change-color-R-P{/* 也可以用%來運轉動畫 */
+    0%  {background-color: red   ;top: 0px; left: 0px;}
+    20% {background-color: orange;top: 0px; left: 10px;}
+    40% {background-color: yellow;top: 0px; left: 20px;}
+    60% {background-color: green ;top: 0px; left: 30px;}
+    80% {background-color: blue  ;top: 0px; left: 40px;}
+    100%{background-color: purple;top: 0px; left: 50px;}
+}
+
+.box{width: 200px; height: 200px; background-color: gray;}
+.box_animation{
+    animation-name: change-color-R-B;/* 套用的動畫名稱 */
+    animation-duration: 2s;          /* 動畫持續時間   */
+    animation-iteration-count: 5;    /* 動畫重複次數   */
+    animation-delay: 1s;             /* 延遲N秒才跑動畫*/
+}
+.box_animation2{
+    animation-name: change-color-R-P;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;/* infinite表示無限重複 */
+    position: relative;                 /* relative(相對) */
+}
+.box_animation3:hover{
+    animation-name: change-color-R-P;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;/* infinite表示無限重複 */
+    position: relative;                 /* relative(相對) */
+    margin-left: 50px;
+}

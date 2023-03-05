@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS測試網頁</title>
+    </head>
+
+    <body>
+        <a href="css2.html"><h1>CSS測試網頁2</h1></a>
+    </body>
+
+    <body><!--文字+顏色控制+邊框基礎-->
+        123(原版)<!---div有換行的效果-->
+        <div style="font-size: 20px;">123(20像素)</div><!--更改文字大小-->
+        <div style="color: blue;"><!--屬性有重複(後面會覆蓋前面)-->
+            123(藍色)
+            <div style="color: red;">
+                123(紅色)
+            </div>
+        </div>
+        <!--style必須在標籤後面(想用正常文字時可以利用特殊字符(h1~6&p)以外的英文代替)-->
+        <h style="background-color: green ;">原版 (背景-綠色)</h>
+        <h style="background-color: yellow;">原版 (背景-黃色)</h>
+        <p style="background-color: green ;">使用P(背景-綠色)</p>
+        <p style="background-color: yellow;">使用P(背景-黃色)</p>
+        邊框架構-(邊線長度+虛(實)線+顏色){<!--border(邊框)-->
+        <h style="border: 4px solid  red   ;">4px-solid (實線)-紅色</h>
+        <h style="border: 5px dashed purple;">5px-dashed(虛線)-紫色</h>}
+        <p style="border: 5px solid  black ;width: 200px;height: 50px;">
+        使用200*50的邊框(使用P時      ,文字不影響邊框大小)</p>
+        <h style="border: 5px solid  black ;width: 200px;height: 50px;">
+        使用200*50的邊框(使用正常文字時,文字會影響邊框大小)</h><hr/>
+    </body>
+
+    <body><!--padding(控制內部空間) & margin(控制外部空間)-->
+             <!--padding-->
+        <div style="background-color: lightblue;border: 2px solid black;padding: 20px;">有換行效果padding:20px(文字和邊框間距20像素)</div>
+        <h   style="background-color: lightblue;border: 2px solid black;padding: 20px;">非換行效果padding:20px(文字和邊框間距20像素)</h  >
+        <h   style="background-color: lightblue;border: 2px solid black;padding: 20px;">非換行效果padding:20px(文字和邊框間距20像素)</h  >
+        <hr/><!--margin-->
+        <div style="background-color: lightblue;border: 2px solid black;margin: 20px;">有換行效果margin:20px(邊框外面增加20像素)</div>
+        <h   style="background-color: lightblue;border: 2px solid black;margin: 20px;">非換行效果margin:20px(邊框外面增加20像素)</h  >
+        <h   style="background-color: lightblue;border: 2px solid black;margin: 20px;">非換行效果margin:20px(邊框外面增加20像素)</h  >
+        <!--可以利用padding & margin-[上下左右] 來控制每一面的距離(只有margin可以寫負數)--><!--也可以一次寫4個像素(會依照上.右.下.左 依序控制)-->
+        <!--{注意:後面寫的會覆蓋前面寫的東西,所以不會{原數值+新增數值}而是直接變成{新增數值}-->
+        <p   style="background-color: lightblue;border: 2px solid black;margin: -40px -10px 40px -10px;">
+        1.margin寫負數時{上面是負數-向上 <b>移動</b> 該數值--下面是負數-會讓 <b>後面文字向上移動</b> 該數值--左邊是負數-向左 <b>增加</b> 該數值--右邊是負數-向右 <b>增加</b> 該數值}
+        </p><!--margin的負數應用貌似沒有換行效果的就沒有辦法用?-->
+        2.另外margin上面有負數也會導致下面的句子跟著向上移動(和下面有負數有類似效果)<hr/>
+    </body>
+
+    <body><!--float & display-->
+        <!--float使用時貌似會讓文字下沉一點/-->
+        <p style="float: left ;">float左邊1</p><p style="float: left ;">float左邊2</p>
+        <p style="float: right;">float右邊1</p><p style="float: right;">float右邊2</p>
+        <p>float的文字可以理解為放一個不能動的空間在最左(右)邊</p><p style="float: left ;">float左邊3</p><p style="float: right;">float右邊3</p>
+        <p>他會先看上面有沒有空間再去看左(右)邊有沒有空間     </p><p style="float: left ;">float左邊4</p><p style="float: right;">float右邊4</p>
+        <br/><br/><br/><!--display可以更改默認格式,寫法有 inline & block -->
+        <p style="display: inline;">display可以更改默認格式,像是讓本來會換行的p變成可以並排的形式,</p>
+        <p style="display: inline;">inline可以變成並排格式,</p>
+        <h style="display: block ;">block則是可以變成換行格式</h>
+    </body>
+
+</html>

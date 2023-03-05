@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--meta標籤-->
+        <meta charset="UTF-8" />
+        <meta name="description" content="測試html的網站"/>
+        <meta name="author"   content="無名"/>
+        <meta name="keywords" content="html,教學用"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>測試用網頁</title>
+    </head>
+
+    <body><!--基礎標籤-->
+        <!--沒有用[h1~6/p/br/hr]就不會換行/如果中間不用填文字可以直接在後面接'/'(例:<XX />)-->
+        原版 <b>粗體字</b> <i>斜體字</i> <!--不換行-->
+        <br>-能夠緊貼上一行-</br>        <!--換行,填字的話可以緊貼上一行-->
+        <br/>                           <!--不加文字可以用這樣代替-->
+        <h1></h1>                       <!--只有h1~6才有效-->
+        <i><b>粗體+斜體字</b></i>
+        <p>測試p可換行</p>               <!--P只有換行效果-->
+        <hr/>                           <!--做出分隔線(加文字沒效果)-->
+        <h0>測試文字h0</h0>              <!--只要非固定格式(H1~6 & P)就一定和原版同概念-->
+        <h1>測試文字h1</h1><h2>測試文字h2</h2><h3>測試文字h3</h3>
+        <h4>測試文字h4</h4><h5>測試文字h5</h5><h6>測試文字h6</h6><hr/>
+    </body>
+
+    <body><!--連結+圖片-->
+        <a href="#">無意義的文字(但可以按)</a>
+        <a href="https://google.com">點此進入google網站</a>(超連結)<br/>
+        <img src="https://i2.wp.com/justengtime.com/wp-content/uploads/2017/07/images.png"
+        width="150"/><!--只調整寬高其中之一的話會等比縮放-->
+    </body>
+
+    <body><!--影片+嵌入YT影片-->
+        <!--[<video src="資料夾影片"controls>瀏覽器無法載入影片</video>](我沒有影片能放就先不弄)-->
+        <iframe width="280"src="https://www.youtube.com/embed/CLUPkcLQm64"title=
+        "YouTube video player"frameborder="0"allow="accelerometer;autoplay;clipboard
+        -write;encrypted-media;gyroscope;picture-in-picture"allowfullscreen></iframe><hr/>
+    </body>
+
+    <body><!--列表+表格-->
+        <!--列表標籤 默認:ul(用點)ol(用數字)-->
+        <ol type="A" style="color: blue;">       <!--type可改變標籤-->
+            <li>google</li>
+            <li>facebook</li>
+            <li>ig</li>
+            <li>ppty</li>
+        </ol>
+        <!--表格-->
+        <table width="400" style="color: blue;">
+            <tr>
+                <td>日期</td>
+                <td>數學</td>
+                <td>國文</td>
+            </tr>
+            <tr>
+                <td>8/7</td>
+                <td>87</td>
+                <td>77</td>
+            </tr>
+            <tr>
+                <td>8/8</td>
+                <td>98</td>
+                <td>87</td>
+            </tr>
+        </table>
+    </body>
+
+    <body><!--html的容器 div & span-->
+        <div style="color: red;"><!-- 一次就把容器內部全部都改變 -->
+            <ol type="i" >
+                <li>google</li>
+                <li>facebook</li>
+                <li>ig</li>
+                <li>ppty</li>
+            </ol>
+            <table width="400">
+                <tr>
+                    <td>日期</td>
+                    <td>數學</td>
+                    <td>國文</td>
+                </tr>
+                <tr>
+                    <td>8/7</td>
+                    <td>87</td>
+                    <td>77</td>
+                </tr>
+                <tr>
+                    <td>8/8</td>
+                    <td>98</td>
+                    <td>87</td>
+                </tr>
+            </table>
+        </div>
+        <span>span測試1</span><!--不換行-->
+        <span>span測試2</span>
+        <div>div測試1</div> <!--自動換行-->
+        <div>div測試2</div>
+        <hr/>
+    </body>
+
+    <body><!--html輸入標籤-->
+        <input type="text"     placeholder="輸入帳號" /><br/><br/>
+        <input type="password" placeholder="輸入密碼" /><br/><br/>
+        <input type="date" ><br/><br/>
+        <input type="range"><br/><br/>
+        <input type="file" ><br/><br/>
+        <input type="checkbox"><br/><br/>
+        <textarea></textarea>
+    </body>
+</html>

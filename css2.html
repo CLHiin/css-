@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CSS測試網頁2</title>
+        <!--在可以用<style>標籤來讓所有[l]標籤都附有效果-->
+        <style>l{color:blue;background-color: skyblue;}</style>
+        <!--也可以用<link>標籤來套用css檔案-->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body style="height: 1600px;"><!--possition(定位)-->
+        <!--定位會在未定位物體上方,都定位,則後來定位的會在上方-->
+
+        <!--position:  fixed (固定定位)原位置相當於沒有放任何物件,將物件固定在畫面的某處-->
+        <div style="float: left;width: 40px ;height: 40px ;background-color: black;position:  fixed  ;left : 0px ;top: 0px;"></div>
+        <div style="float: left;width: 50px ;height: 50px ;background-color: red ;"></div>
+        
+        <!--position:relative(相對定位)原位置相當有一個隱形的物件,將物件從原處偏移-->
+        <!--偏移數值表示他往反方向移動的距離,例如:{right: 10px}=向左移動10px-->
+        <div style="float: left;width: 40px ;height: 40px ;background-color: blue ;position: relative;bottom: 10px;"></div>
+        <div style="float: left;width: 50px ;height: 50px ;background-color: red ;"></div><br/><br/><br/><hr/>
+
+        <!--position:absolute (絕對定位)原位置相當於沒有放任何物件,將物件固定在一個地方-->
+        <div style="padding: 30px;border: 5px solid red;">
+            <div style="padding: 30px;border: 5px solid red;">
+                <div style="position: absolute;top: 0px;right: 0px;height: 40px;width: 40px;background-color: green;"></div>
+            </div>
+        </div><hr/>
+        <!--[絕對定位]可以和[相對定位]互相配合,但[固定定位]無法配合-->
+        <div style="padding: 30px;border: 5px solid red;">
+            <div style="position: relative;padding: 30px;border: 5px solid red;">
+                <div style="position: absolute;top: 0px;right: 0px;height: 40px;width: 40px;background-color: orange;"></div>
+            </div>
+        </div>
+    </body>
+
+    <body><!--opacity(透明度) & border-radius(圓滑邊框)-->
+        <p style="margin-top: -30px;position: relative;top: 40px;left: 5px;color: black">安安</p>
+        <div style="opacity: 0.5;border-radius: 40px 25px 10px 5px;width: 40px;height: 40px;background-color: blue;"></div>
+        <hr/><!--opacity:1~0 & border-radius: ??px(也可以一次寫4個,會由左上順時針到左下)-->
+    </body>
+
+    <body><!--css檔案套用-->
+        <l>安安</l><l>安安</l><l>安安</l><l>安安</l><l>安安</l>
+        <k>KK</k><k>KK</k><k>KK</k><k>KK</k><k>KK</k><br/>
+
+        <body><!--class & id -->
+            <!--一個標籤可擁有複數class類別,id和class可以一起用-->
+            <h class="food background-color">食物 1</h>
+            <h class="food " >食物 2</h>
+            <h class="food " >食物 3</h>
+            <h class="person">人物 1</h>
+            <h class="person">人物 2</h>
+            <h class="person">人物 3</h>
+            <!--一個標籤不可以有複數的id(會讓所有id無效,但其他效果還會在)-->
+            <!--css-1(文字紫色)/aa(背景綠色)/background-color(背景灰色)-->
+            <h0 id="css-1 aa" class="background-color">使用2個id+class </h0>
+            <h0 id="css-1"    class="background-color">id+class(都有效)</h0>
+            <h0 id="css-1">第2次使用id </h0>
+            <h0 id="aa"   >使用id--(aa)</h0><br>
+            <!-- id效果 > class效果 > 標籤 & css效果會被覆蓋-->
+            <aa  id="id" class="class">標籤+id+class</aa> |
+            <h  class="class" id="id" >id+class</h> |
+            <aa class="class">標籤+class</aa> |
+            <aa id="id">標籤+id</aa> |
+            <h class="class">class</h> |
+            <h id="id">id</h> |
+            <aa>標籤</aa>
+        </body>
+
+        <body><!--css套用延伸-->
+            <ul>
+                <a href="https://www.google.com"><li>google</li></a>
+                <li><a href="https://www.google.com">google</a></li>
+                <li>facebook</li>
+                <li>line</li>
+                <div><c>ul-div-c</c></div>
+            </ul>
+            <div><ul><c>div-ul-c</c></ul></div>
+            <div><c>div-c</c></div>
+            <input type="text"/>
+            <input type="date">
+            <button>變色按鈕(滑鼠移上去)</button>
+        </body>
+
+        <body><!--flex -->
+            <div class="container">
+                <div>區塊1</div>
+                <div>區塊2</div>
+                <div>區塊3</div>
+                <div>區塊4</div>
+                <div>區塊5</div>
+                <div>區塊6</div>
+                <div>區塊7</div>
+                <div>區塊8</div>
+                <div>區塊9</div>
+                <div>區塊10</div>
+                <div>區塊11</div>
+                <div>區塊12</div>
+                <div>區塊13</div>
+                <div>區塊14</div>
+                <div>區塊15</div>
+                <div>區塊16</div>
+                <div>區塊17</div>
+            </div>
+            <div class="container">
+                <div class="box1">變色區塊1</div>
+                <div class="box2">變色區塊2</div>
+                <div class="box3">變色區塊3</div>
+            </div>
+        </body>
+    </body>
+
+    <body><!-- animation (動畫) -->
+        <div class="box box_animation"  style="float: left;"></div>
+        <div class="box box_animation2" style="float: left;"></div>
+        <div class="box box_animation3" style="float: left; position:relative ;left: 50px;">
+        <b style="background-color: white;">滑鼠移上去才會有效</b></div>
+    </body>
+
+</html>
